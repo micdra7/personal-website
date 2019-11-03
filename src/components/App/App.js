@@ -5,6 +5,7 @@ import FlipSection from '../FlipSection/FlipSection';
 import MainInfoSection from '../MainInfoSection/MainInfoSection';
 import CurrentInfo from '../CurrentInfo/CurrentInfo';
 import Navbar from '../Navbar/Navbar';
+import Technologies from '../Technologies/Technologies';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
 
                 <FlipSection>
                     <Route exact path="/" render={() => <CurrentInfo />} />
+                    <Route path="/tech" render={() => <Technologies />} />
                 </FlipSection>
             </Router>
             

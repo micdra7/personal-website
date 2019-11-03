@@ -12,12 +12,12 @@
         flex: 1;
         text-align: center;
         text-decoration: none;
-        color: black;
+        color: $primary-color;
         font-size: 1.15rem;
         padding: .15rem;
 
         &:hover, &:active {
-            color: $primary-color;
+            color: black;
         }
     }
 }
