@@ -9,17 +9,32 @@
 
     & a {
         display: inline-block;
-        flex: 1;
+        width: 50%;
         text-align: center;
         text-decoration: none;
         color: $primary-color;
         font-size: 1.15rem;
         padding: .15rem;
-        margin-left: .5rem;
-        margin-right: .5rem;
 
         &:hover, &:active {
             color: black;
+        }
+    }
+
+    @media only screen and (min-width: $small) {
+        width: 40%;
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        & a {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (min-width: $large) {
+        & a {
+            width: 50%;
         }
     }
 }
