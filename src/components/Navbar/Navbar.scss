@@ -1,0 +1,23 @@
+@import '../../variables.scss';
+
+.navbar {
+    order: 1;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    & a {
+        display: inline-block;
+        flex: 1;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-size: 1.15rem;
+        padding: .15rem;
+
+        &:hover, &:active {
+            color: $primary-color;
+        }
+    }
+}
