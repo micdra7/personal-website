@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import App from './App';
+import CurrentInfo from './CurrentInfo';
 
 let container;
 
@@ -16,14 +16,14 @@ afterEach(() => {
     container = null;
 });
 
-describe('App.js', () => {
+describe('CurrentInfo.js', () => {
     it('renders properly', () => {
         act(() => {
-            render( <App />, container);
+            render( <CurrentInfo />, container);
         });
 
-        expect(container.textContent).toBe('HomeTechnologiesOtherContactStudent at Silesian University' +
-        ' of TechnologyFaculty of Automatic Control, Electronics and Computer' + 
-        ' ScienceMichał DrabikFullstack Web Developer');
+        expect(container.textContent)
+            .toBe('Student at Silesian University of Technology' +
+                'Faculty of Automatic Control, Electronics and Computer Science');
     });
 }); 

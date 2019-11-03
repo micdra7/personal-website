@@ -1,0 +1,16 @@
+.other {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+
+    & .languages {
+        width: 100%;
+    }
+
+    & .certificates {
+        width: 100%;
+    }
+}

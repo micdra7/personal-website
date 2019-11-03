@@ -1,13 +1,13 @@
+@import '../../variables.scss';
+
 .main-info-section {
     width: 100%;
-    height: 40%;
+    height: 30%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     text-align: center;
     overflow: hidden;
 
-    & h1, & h3 {
-        font-variant: small-caps;
-    }
+    color: $primary-color;
 }

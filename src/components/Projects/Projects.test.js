@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import App from './App';
+import Projects from './Projects';
 
 let container;
 
@@ -16,14 +16,13 @@ afterEach(() => {
     container = null;
 });
 
-describe('App.js', () => {
+describe('Projects.js', () => {
     it('renders properly', () => {
         act(() => {
-            render( <App />, container);
+            render( <Projects />, container);
         });
 
-        expect(container.textContent).toBe('HomeTechnologiesOtherContactStudent at Silesian University' +
-        ' of TechnologyFaculty of Automatic Control, Electronics and Computer' + 
-        ' ScienceMichał DrabikFullstack Web Developer');
+        expect(container.textContent)
+            .toBe('');
     });
 }); 
