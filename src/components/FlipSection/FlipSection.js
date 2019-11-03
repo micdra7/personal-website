@@ -1,10 +1,10 @@
 import React from 'react';
 import './FlipSection.scss';
 
-const FlipSection = () => {
+const FlipSection = ({ children }) => {
     return (
         <section className="flip-section">
-            
+            {children}
         </section>
     );
 };

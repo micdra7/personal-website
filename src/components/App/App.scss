@@ -1,7 +1,13 @@
 @import '../../variables.scss';
 
-.App {
+.app-wrapper {
     width: 100%;
     height: 100%;
+    padding: .75rem;
     background-color: $secondary-color;
+
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: center;
+    align-items: center;
 }
