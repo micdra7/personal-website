@@ -8,6 +8,10 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
-
     color: $primary-color;
+
+    @media only screen and (min-width: $small) {
+        width: 40%;
+        height: 100%;
+    }
 }
