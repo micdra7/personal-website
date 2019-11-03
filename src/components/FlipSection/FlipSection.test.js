@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import App from './App';
+import FlipSection from './FlipSection';
 
 let container;
 
@@ -16,10 +16,10 @@ afterEach(() => {
     container = null;
 });
 
-describe('App.js', () => {
+describe('FlipSection.js', () => {
     it('renders properly', () => {
         act(() => {
-            render( <App />, container);
+            render( <FlipSection />, container);
         });
 
         expect(container.textContent).toBe('');

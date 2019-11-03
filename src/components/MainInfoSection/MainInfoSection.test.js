@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import App from './App';
+import MainInfoSection from './MainInfoSection';
 
 let container;
 
@@ -16,12 +16,12 @@ afterEach(() => {
     container = null;
 });
 
-describe('App.js', () => {
+describe('MainInfoSection.js', () => {
     it('renders properly', () => {
         act(() => {
-            render( <App />, container);
+            render( <MainInfoSection />, container);
         });
 
-        expect(container.textContent).toBe('');
+        expect(container.textContent).toBe('Michał DrabikFullstack Web Developer');
     });
 }); 
