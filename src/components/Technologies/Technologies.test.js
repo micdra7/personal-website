@@ -23,6 +23,6 @@ describe('Navbar.js', () => {
         });
 
         expect(container.textContent)
-            .toBe('');
+            .toBe('BackendC#.NET Core MVC & REST APIMySQLPostgreSQLFrontendReact.js (with Hooks)ReduxSCSS');
     });
 }); 

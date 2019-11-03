@@ -22,6 +22,8 @@ describe('App.js', () => {
             render( <App />, container);
         });
 
-        expect(container.textContent).toBe('');
+        expect(container.textContent).toBe('HomeTechnologiesOtherContactStudent at Silesian University' +
+        ' of TechnologyFaculty of Automatic Control, Electronics and Computer' + 
+        ' ScienceMichał DrabikFullstack Web Developer');
     });
 }); 

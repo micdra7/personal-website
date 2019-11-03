@@ -2,6 +2,7 @@ import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import Navbar from './Navbar';
+import { MemoryRouter } from 'react-router-dom';
 
 let container;
 
@@ -18,8 +19,13 @@ afterEach(() => {
 
 describe('Navbar.js', () => {
     it('renders properly', () => {
+        const links = [{ name: 'Home', href: '/' }, { name: 'Technologies', href: '/tech' },
+        { name: 'Other', href: '/other' }, { name: 'Contact', href: '/contact' }];
+
         act(() => {
-            render( <Navbar />, container);
+            render( <MemoryRouter>
+                        <Navbar links={links} />        
+                    </MemoryRouter>, container);
         });
 
         expect(container.textContent)
