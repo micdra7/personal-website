@@ -19,8 +19,9 @@ afterEach(() => {
 
 describe('Navbar.js', () => {
     it('renders properly', () => {
-        const links = [{ name: 'Home', href: '/' }, { name: 'Technologies', href: '/tech' },
-        { name: 'Other', href: '/other' }, { name: 'Contact', href: '/contact' }];
+        const links = [{ name: 'Home', href: '/' }, { name: 'Technologies', href: '/tech' }, 
+        { name: 'Projects', href: '/projects'}, { name: 'Other', href: '/other' }, 
+        { name: 'Contact', href: '/contact' }];
 
         act(() => {
             render( <MemoryRouter>
@@ -29,6 +30,6 @@ describe('Navbar.js', () => {
         });
 
         expect(container.textContent)
-            .toBe('HomeTechnologiesOtherContact');
+            .toBe('HomeTechnologiesProjectsOtherContact');
     });
 }); 
