@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+
+.projects {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    @media (min-width: $large) {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}

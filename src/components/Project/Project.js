@@ -5,6 +5,10 @@ const Project = ({ name, description, imgSrc, githubLink, siteLink }) => {
     return (
         <div className="project">
             <h3>{name}</h3>
+            <aside className="image">
+                {/* eslint-disable-next-line no-undef */}
+                <img src={process.env.PUBLIC_URL + '/assets/images/' + imgSrc} alt={'Project: ' + name} />
+            </aside>
             <section className="description">
                 <p>
                     {description}
@@ -27,10 +31,6 @@ const Project = ({ name, description, imgSrc, githubLink, siteLink }) => {
                 }
                 </div>
             </section>
-            <aside className="image">
-                {/* eslint-disable-next-line no-undef */}
-                <img src={process.env.PUBLIC_URL + '/assets/images/' + imgSrc} alt={'Project: ' + name} />
-            </aside>
         </div>
     );
 };
