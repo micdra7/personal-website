@@ -10,7 +10,7 @@ const CurrentInfo = () => {
                 Since I am constantly trying to improve and expand my skillset, I am open to any other tech stack.
             </p>
             <p>
-                I am currently studying at Silesian University of Technology, 
+                I am currently studying Computer Science at Silesian University of Technology, 
                 faculty of Automatic Control, Electronics and Computer Science.
             </p>
         </div>

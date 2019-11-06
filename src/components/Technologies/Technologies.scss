@@ -13,6 +13,7 @@
 
     @media (min-width: $small) {
         flex-flow: column nowrap;
+        justify-content: center;
     }
 
     @media (min-width: $x-large) {
@@ -30,11 +31,13 @@
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+        flex-shrink: 0; //safari specific fix
 
         @media (min-width: $x-small) {
             height: 100%;
             width: auto;
             justify-content: flex-start;
+            flex-shrink: 1;
         }
 
         @media (min-width: $small) {
@@ -56,11 +59,13 @@
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+        flex-shrink: 0; //safari specific fix
 
         @media (min-width: $x-small) {
             height: 100%;
             width: auto;
             justify-content: flex-start;
+            flex-shrink: 1;
         }
 
         @media (min-width: $small) {
