@@ -5,12 +5,17 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    padding: .25rem;
+
+    @media (min-width: $large) {
+        width: 50%;
+    }
 
     & .description {
         height: 60%;
-        order: 2;
         padding: .25rem;
         float: none;
+        text-align: justify;
 
         & .buttons {
             display: flex;
@@ -53,11 +58,10 @@
     & .image {
         width: 100%;
         text-align: center;
-        height: 40%;
-        order: 1;
+        height: auto;
 
         & img {
-            width: 70%;
+            width: 100%;
             height: auto;
             border: 1px solid $secondary-color;
         }

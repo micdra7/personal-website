@@ -9,9 +9,17 @@ const Technologies = () => {
                 <h3>Backend</h3>
                 <ul className="tech-list">
                     <li>C#</li>
-                    <li>.NET Core MVC &amp; REST API</li>
+                    <li>ASP.NET Core MVC &amp; REST API</li>
                     <li>MySQL</li>
                     <li>PostgreSQL</li>
+                    <li>
+                        Other
+                        <ul>
+                            <li>Java + Spring and Maven</li>
+                            <li>Basic PHP</li>
+                            <li>Basic C and C++</li>
+                        </ul>
+                    </li>
                 </ul>
             </section>
             <section className="frontend">

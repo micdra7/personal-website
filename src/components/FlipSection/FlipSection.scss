@@ -5,13 +5,14 @@
     height: 70%;
     display: flex;
     justify-content: center;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     background-color: $primary-color;
     color: $secondary-color;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     padding: .25rem;
 
-    @media only screen and (min-width: $small) {
+    @media (min-width: $small) {
         width: 60%;
         height: 100%;
     }

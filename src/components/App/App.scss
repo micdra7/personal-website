@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
 
-    @media only screen and (min-width: $small) {
+    @media (min-width: $small) {
         flex-flow: row wrap;
     }
 }
