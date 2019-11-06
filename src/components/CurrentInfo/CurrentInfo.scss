@@ -1,9 +1,29 @@
+@import '../../variables.scss';
+
 .current-info {
+    width: 100%;
+    padding: .25rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    @media (min-width: $x-small) {
+        text-align: justify;
+    }
+
+    @media (min-width: $small) {
+        width: 90%;
+    }
+
+    @media (min-width: $large) {
+        width: 80%;
+    }
+
+    @media (min-width: $x-large) {
+        width: 60%;
+    }
 
     & h5 {
         margin-top: 0;
