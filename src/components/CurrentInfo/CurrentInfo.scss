@@ -14,11 +14,11 @@
 
     @media (min-width: $small) {
         width: 90%;
-        justify-content: center;
     }
 
     @media (min-width: $large) {
         width: 80%;
+        justify-content: center;
     }
 
     @media (min-width: $x-large) {

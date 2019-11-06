@@ -13,7 +13,6 @@
 
     @media (min-width: $small) {
         flex-flow: column nowrap;
-        justify-content: center;
     }
 
     @media (min-width: $x-large) {
@@ -44,12 +43,14 @@
             height: auto;
             width: 100%;
             justify-content: center;
+            flex-shrink: 0; //safari specific fix
         }
 
         @media (min-width: $x-large) {
             height: 100%;
             width: auto;
             justify-content: center;
+            flex-shrink: 1;
         }
     }
     
@@ -72,12 +73,14 @@
             height: auto;
             width: 100%;
             justify-content: center;
+            flex-shrink: 0; //safari specific fix
         }
 
         @media (min-width: $x-large) {
             height: 100%;
             width: auto;
             justify-content: center;
+            flex-shrink: 1;
         }
     }
 }
