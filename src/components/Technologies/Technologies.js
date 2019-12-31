@@ -26,8 +26,10 @@ const Technologies = () => {
                 <h3>Frontend</h3>
                 <ul className="tech-list">
                     <li>React.js (with Hooks)</li>
+                    <li>Typescript</li>
                     <li>Redux</li>
                     <li>SCSS</li>
+                    <li>Webpack</li>
                 </ul>
             </section>
         </div>

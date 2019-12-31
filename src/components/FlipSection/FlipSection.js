@@ -4,7 +4,9 @@ import './FlipSection.scss';
 const FlipSection = ({ children }) => {
     return (
         <section className="flip-section">
-            {children}
+            <div className="content">
+                {children}
+            </div>
         </section>
     );
 };
