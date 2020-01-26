@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom';
-import styled from 'styled-components';
-import { primary, fontStyle } from '../../constants';
+import './App.scss';
 
 const App: React.FC = () => {
 
     const [burgerActive, setBurgerActive] = useState(false);
+    const [wrapperClassName, setWrapperClassName] = useState('');
 
     const links = [
         { name: 'Home', href: '/' },
@@ -22,35 +22,19 @@ const App: React.FC = () => {
                         githubLink: 'https://github.com/micdra7/card-match-game',
                         siteLink: 'https://micdra7.github.io/card-match-game/#/'}];
 
-    const Wrapper = styled('div')<{active: boolean}>`
-        box-sizing: border-box;
-
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-
-        position: fixed;
-
-        top: ${(props) => props.active ? 5 : 0}rem;
-        width: 100%;
-        height: 100%;
-
-        background-color: ${primary};
-
-        transition: all ease-in-out .5s;
-        font-family: ${fontStyle};
-    `;
 
     const handleBurgerClick = (event?: any): void => setBurgerActive(!burgerActive);
 
-    const getClassName = (isActive: boolean): string => (isActive ? 'active' : '');
+    useEffect(() => {
+        if (burgerActive) {
+            setWrapperClassName('active');
+        } else {
+            setWrapperClassName('');
+        }
+    }, [burgerActive]);
 
     return (
-        // tslint:disable-next-line: jsx-no-lambda
-        <Wrapper className={(): string => getClassName(burgerActive)} active={burgerActive} onClick={handleBurgerClick}>
-            xd
-        </Wrapper>
+        <h1>xd</h1>
     );
 };
 
