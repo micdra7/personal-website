@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({ isBurgerActive, handleBurgerClick }) =>
             <ul className='nav'>
                 {renderedLinks}
             </ul>
-            <div className='burger'>
+            <div className={getClassNameIfActive('burger', isBurgerActive)} onClick={handleBurgerClick}>
                 <span />
                 <span />
                 <span />
