@@ -6,6 +6,7 @@ import MainInfo from '../../presentational/MainInfo/MainInfo';
 import Skills from '../../presentational/Skills/Skills';
 import Other from '../../presentational/Other/Other';
 import Contact from '../../presentational/Contact/Contact';
+import Projects from '../Projects/Projects';
 
 const App: React.FC = () => {
 
@@ -22,7 +23,9 @@ const App: React.FC = () => {
                         <Route path='/skills'>
                             <Skills />
                         </Route>
-
+                        <Route path='/projects'>
+                            <Projects />
+                        </Route>
                         <Route path='/other'>
                             <Other />
                         </Route>
