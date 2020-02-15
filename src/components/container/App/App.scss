@@ -8,4 +8,14 @@ html, body, #app, .wrapper {
     margin: 0;
     box-sizing: border-box;
     font-family: $font;
+    background-color: $secondary;
+}
+
+.wrapper {
+    margin-top: 5rem;
+    transition: all .25s ease-in-out;
+
+    &.active {
+        margin-top: calc(5rem + 200px);
+    }
 }

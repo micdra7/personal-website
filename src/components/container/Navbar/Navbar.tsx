@@ -16,6 +16,10 @@ const Navbar: React.FC<NavbarProps> = ({ isBurgerActive, handleBurgerClick }) =>
 
     return (
         <nav className={getClassNameIfActive('navbar', isBurgerActive)}>
+            <div className='brand'>
+                <h1>Michal Drabik</h1>
+                <h3><sup>Fullstack Web Developer</sup></h3>
+            </div>
             <ul className='nav'>
                 {renderedLinks}
             </ul>
@@ -24,6 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ isBurgerActive, handleBurgerClick }) =>
                 <span />
                 <span />
             </div>
+            <div className='bottom' />
         </nav>
     );
 };
