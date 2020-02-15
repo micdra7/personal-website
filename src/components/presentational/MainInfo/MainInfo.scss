@@ -1,0 +1,12 @@
+.main-info {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: justify;
+    justify-content: center;
+    margin: .5rem;
+    height: 100%;
+
+    & h3 {
+        text-align: center;
+    }
+}
