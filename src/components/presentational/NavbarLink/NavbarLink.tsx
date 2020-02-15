@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavbarLink.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';   
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export interface NavbarLinkProps {
     href: string;

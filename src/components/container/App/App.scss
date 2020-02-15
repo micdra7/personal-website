@@ -9,23 +9,13 @@ html, body, #app, .wrapper {
     box-sizing: border-box;
     font-family: $font;
     background-color: $secondary;
-    overflow: hidden;
 }
 
 .wrapper {
-    margin-top: 5rem;
-    transition: all .25s ease-in-out;
+    padding-bottom: 8rem;
 
     & .main {
-        height: calc(100% - 5rem);
-        transition: all .25s ease-in-out;
-    }
-
-    &.active {
-        margin-top: calc(5rem + 200px);
-
-        & .main {
-            height: calc(100% - 5rem - 200px);
-        }
+        height: 100%;
+        width: 100%;
     }
 }

@@ -19,11 +19,11 @@
         width: 100%;
 
         &:link, &:visited {
-            color: $primary;
+            color: $secondary;
         }
 
         &:active, &:hover {
-            color: $primary-light;
+            color: $secondary-dark;
         }
 
         & .icon {
