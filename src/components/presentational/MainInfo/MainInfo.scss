@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .main-info {
     display: flex;
     flex-flow: column nowrap;
@@ -5,6 +7,23 @@
     justify-content: center;
     padding: .5rem;
     height: 100%;
+
+    & header {
+        position: fixed;
+        top: 3rem;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        filter: drop-shadow(0px 0px 1px $primary);
+
+        & h1 {
+            margin: 0;
+        }
+
+        & h5 {
+            margin: .15rem;
+        }
+    }
 
     & h3 {
         text-align: center;
