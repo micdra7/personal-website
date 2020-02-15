@@ -1,13 +1,21 @@
 @import '../../../variables.scss';
 
 .navbar-link {
-    margin: .15rem;
-    width: 100%;
+    margin: .25rem;
+    flex: 1 0 15%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 
     & a {
         text-decoration: none;
-        font-size: 1.45rem;
-        display: inline-block;
+        text-align: center;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
         width: 100%;
 
         &:link, &:visited {
@@ -17,19 +25,10 @@
         &:active, &:hover {
             color: $primary-light;
         }
-    }
-}
 
-.navbar.active {
-    & .navbar-link {
-        & a {
-            &:link, &:visited {
-                color: $secondary;
-            }
-
-            &:active, &:hover {
-                color: $secondary-dark;
-            }
+        & .icon {
+            display: inline-block;
+            width: 100%;
         }
     }
 }

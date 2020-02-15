@@ -2,117 +2,28 @@
 
 .navbar {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     
     width: 100%;
-    height: 5rem;
+    height: 8rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
 
     background-color: $secondary;
-    transition: all .25s ease-in-out;
-
-    & .brand {
-        & * {
-            margin: 0;
-            color: $primary;
-            transition: all .25s ease-in-out;
-            pointer-events: none;
-        }
-    }
+    box-shadow: 0px 0px 3px 0px rgba(51,51,51,1);
 
     & .nav {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: flex-start;
         list-style-type: none;
-        height: 100%;
-        width: 80%;
-        position: absolute;
-        top: -150%;
-        padding: 0;
-        margin: 0;
-        opacity: 0;
-        transition: all .25s ease-in-out;
-    }
-
-    & .burger {
-        position: fixed;
-        top: 0;
-        right: .05rem;
-        width: 3rem;
-        height: 3rem;
         display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-evenly;
+        flex-flow: row wrap;
+        justify-content: center;
         align-items: center;
-
-        & span {
-            display: block;
-            background-color: $primary;
-            width: 100%;
-            height: 20%;
-            border-radius: .25rem;
-
-            transition: all .25s ease-in-out;
-        }
-    }
-
-    & .bottom {
-        height: 0;
         width: 100%;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-        position: absolute;
-        bottom: 0;
-        border: 0px;
-        background-color: $secondary;
-        transition: all .25s ease-in-out;
-    }
-
-    &.active {
-        background-color: $primary;
-        height: calc(5rem + 200px);
-
-        & .brand {
-            & * {
-                color: $secondary-dark;
-                filter: blur(2px);
-            }
-        }
-
-        & .nav {
-            top: 0;
-            opacity: 1;
-        }
-
-        & .burger {
-            & span {
-                background-color: $secondary;
-
-                &:first-of-type {
-                    transform: rotate(45deg);
-                    transform-origin: left;
-                }
-
-                &:nth-of-type(2) {
-                    width: 0%;
-                    opacity: 0;
-                }
-
-                &:last-of-type {
-                    transform: rotate(-45deg) translate(-.25rem, .25rem);
-                    transform-origin: left;
-                }
-            }
-        }
-
-        & .bottom {
-            height: 15px;
-        }
+        height: 100%;
+        margin: 0;
+        padding: 0;
     }
 }

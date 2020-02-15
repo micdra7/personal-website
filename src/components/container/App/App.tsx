@@ -7,16 +7,10 @@ import MainInfo from '../../presentational/MainInfo/MainInfo';
 
 const App: React.FC = () => {
 
-    const [isBurgerActive, setBurgerActive] = useState(false);
-
-    const handleBurgerClick = (): void => {
-        setBurgerActive(!isBurgerActive);
-    };
-
     return (
-        <div className={getClassNameIfActive('wrapper', isBurgerActive)}>
+        <div className='wrapper'>
             <Router>
-                <Navbar isBurgerActive={isBurgerActive} handleBurgerClick={handleBurgerClick} />
+                <Navbar />
 
                 <section className='main'>
                     <Switch>
