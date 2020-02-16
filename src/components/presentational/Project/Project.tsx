@@ -25,7 +25,7 @@ const Project: React.FC<ProjectProps> = ({ name, description, img, githubLinks, 
                 Live website
             </a>
         ) :
-        <a className='disabled'>Website</a>;
+        <></>;
 
     return (
         <div className='project'>

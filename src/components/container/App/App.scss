@@ -16,12 +16,16 @@ html, body, #app, .wrapper {
 
     & .main {
         height: 100%;
-        width: 100%;
-
-        & > div {
-            height: 100%;
-        }
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
     }
+}
+
+.transition-group {
+    height: 100%;
+    width: 100%;
 }
 
 .fade-enter {
@@ -31,5 +35,13 @@ html, body, #app, .wrapper {
     &.fade-enter-active {
         opacity: 1;
         transition: opacity .25s ease-in;
+    }
+}
+
+.fade-exit {
+    display: none;
+
+    & * {
+        display: none;
     }
 }

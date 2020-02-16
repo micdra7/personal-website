@@ -2,9 +2,14 @@
 
 .skills {
     height: 100%;
+    width: 90%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: flex-start;
     padding: .5rem;
+
+    @media (min-width: $sm) {
+        width: 70%;
+    }
 }

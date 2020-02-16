@@ -14,11 +14,9 @@ const App: React.FC = () => (
         <Router>
             <Navbar />
 
-            <section className='main'>
-                <Switch>
-                    <Route path='*' children={<MainSection />} />
-                </Switch>
-            </section>
+            <Switch>
+                <Route path='*' children={<MainSection />} />
+            </Switch>
         </Router>
     </div>
 );
@@ -30,20 +28,22 @@ const MainSection: React.FC = () => {
     const location = useLocation();
 
     return (
-        <TransitionGroup>
+        <TransitionGroup className='transition-group'>
             <CSSTransition
                 // I need to use pathname as location.key was not updating at all
                 key={location.pathname}
                 classNames='fade'
                 timeout={300}>
 
-                <Switch location={location}>
-                    <Route exact path='/' children={<MainInfo />} />
-                    <Route path='/skills' children={<Skills />} />
-                    <Route path='/projects' children={<Projects />} />
-                    <Route path='/other' children={<Other />} />
-                    <Route path='/contact' children={<Contact />} />
-                </Switch>
+                <section className='main'>
+                    <Switch location={location}>
+                        <Route exact path='/' children={<MainInfo />} />
+                        <Route path='/skills' children={<Skills />} />
+                        <Route path='/projects' children={<Projects />} />
+                        <Route path='/other' children={<Other />} />
+                        <Route path='/contact' children={<Contact />} />
+                    </Switch>
+                </section>
             </CSSTransition>
         </TransitionGroup>
     );
