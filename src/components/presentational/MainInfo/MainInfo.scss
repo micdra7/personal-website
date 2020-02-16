@@ -1,0 +1,38 @@
+@import '../../../variables.scss';
+
+.main-info {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    height: 100%;
+
+    & header {
+        color: $primary;
+        filter: saturate(110%);
+        margin-bottom: 3rem;
+
+        & h1 {
+            margin: 0;
+        }
+
+        & h3 {
+            text-align: left;
+            margin: .15rem;
+        }
+    }
+
+    @media (min-width: $sm) {
+        width: 70%;
+
+        & header {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (min-width: $lg) {
+        width: 50%;
+    }
+}
