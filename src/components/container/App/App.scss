@@ -17,5 +17,19 @@ html, body, #app, .wrapper {
     & .main {
         height: 100%;
         width: 100%;
+
+        & > div {
+            height: 100%;
+        }
+    }
+}
+
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+
+    &.fade-enter-active {
+        opacity: 1;
+        transition: opacity .25s ease-in;
     }
 }

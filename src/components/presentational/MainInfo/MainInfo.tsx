@@ -5,7 +5,7 @@ const MainInfo: React.FC = () => (
     <div className='main-info'>
         <header>
             <h1>Michal Drabik</h1>
-            <h5>Fullstack Web Developer</h5>
+            <h3>Fullstack Web Developer</h3>
         </header>
 
         <main>

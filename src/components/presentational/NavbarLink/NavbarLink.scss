@@ -18,6 +18,8 @@
         align-items: center;
         width: 100%;
 
+        transition: all .25s ease-in-out;
+
         &:link, &:visited {
             color: $secondary;
         }
@@ -29,6 +31,18 @@
         & .icon {
             display: inline-block;
             width: 100%;
+        }
+    }
+
+    &.selected {
+        a {
+            &:link, &:visited {
+                color: $accent;
+            }
+
+            &:active, &:hover {
+                color: $accent-dark;
+            }
         }
     }
 }
