@@ -4,12 +4,11 @@ import './MainInfo.scss';
 const MainInfo: React.FC = () => (
     <div className='main-info'>
         <header>
-            <h1>Michal Drabik</h1>
+            <h1>Michał Drabik</h1>
             <h3>Fullstack Web Developer</h3>
         </header>
 
         <main>
-        <h3>About me</h3>
             <p>
                 I am an aspiring fullstack developer with particular love
                 for C# (.NET Core) and Javascript (React). Since I am
