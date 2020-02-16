@@ -7,9 +7,13 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: flex-start;
-    padding: .5rem;
+    margin: .5rem;
 
     @media (min-width: $sm) {
         width: 70%;
+    }
+
+    @media (min-width: $lg) {
+        width: 40%;
     }
 }

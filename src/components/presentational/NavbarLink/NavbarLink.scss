@@ -45,4 +45,8 @@
             }
         }
     }
+
+    @media (min-width: $md) {
+        font-size: 1.15rem;
+    }
 }

@@ -11,6 +11,15 @@ html, body, #app, .wrapper {
     background-color: $secondary;
 }
 
+#app {
+    @media (min-width: $lg) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .wrapper {
     padding-bottom: 8rem;
 
@@ -20,6 +29,22 @@ html, body, #app, .wrapper {
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
+    }
+
+    @media (min-width: $md) {
+        padding-bottom: 0;
+        padding-left: 8rem;
+        overflow-y: scroll;
+    }
+
+    @media (min-width: $lg) {
+        position: absolute;
+        max-height: 768px;
+        max-width: 1280px;
+
+        border: 1px solid $primary;
+        box-shadow: 0px 0px 5px 0px rgba(51,51,51,1);
+        overflow-y: auto;
     }
 }
 
@@ -43,5 +68,13 @@ html, body, #app, .wrapper {
 
     & * {
         display: none;
+    }
+
+    &.fade-exit-active {
+        display: none;
+
+        & * {
+            display: none;
+        }
     }
 }

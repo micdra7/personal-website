@@ -80,4 +80,12 @@
             border: 1px solid $secondary;
         }
     }
+
+
+    @media (min-width: $lg) {
+        width: 40%;
+        padding: 0;
+        border-bottom: 0px;
+        margin: .5rem;
+    }
 }
