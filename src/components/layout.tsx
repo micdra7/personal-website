@@ -7,13 +7,13 @@ interface ILayoutProps {
 }
 
 export const Layout = ({ children }: ILayoutProps) => (
-  <Box textAlign="center" fontSize="xl">
-    <Grid minH="100vh" p={6}>
+  <Flex textAlign="center" fontSize="xl" justify="center">
+    <Grid minH="100vh" p={6} w="100%" maxW="1600px">
       <Flex justify="end">
         <LanguageSwitcher />
         <ColorModeSwitcher />
       </Flex>
       <Box>{children}</Box>
     </Grid>
-  </Box>
+  </Flex>
 );
