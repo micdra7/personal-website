@@ -1,5 +1,5 @@
 export const Polish = {
-  buttons: {
-    test: 'przycisk',
+  headings: {
+    title: 'Programista Fullstack',
   },
 };

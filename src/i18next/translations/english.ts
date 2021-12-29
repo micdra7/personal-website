@@ -1,5 +1,5 @@
 export const English = {
-  buttons: {
-    test: 'button',
+  headings: {
+    title: 'Fullstack Web Developer',
   },
 };
