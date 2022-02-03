@@ -1,9 +1,24 @@
 import type { NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.css';
 
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+};
+
 const Home: NextPage = () => {
+  const { t } = useTranslation();
+  const router = useRouter();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,9 +28,17 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <h1 className={styles.title}>{t('text')}</h1>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+
+        <Link href={router.pathname} locale="en">
+          <a>en</a>
+        </Link>
+        <Link href={router.pathname} locale="pl">
+          <a>pl</a>
+        </Link>
 
         <p className={styles.description}>
           Get started by editing{' '}
