@@ -13,7 +13,7 @@ export const MenuBurger = ({ isOpen, onToggle }: IMenuBurgerProps) => (
     justifyItems="center"
     alignItems="center"
     pos="fixed"
-    top="50%"
+    top="6"
     right="6"
     size="lg"
     aria-label="toggle menu"
