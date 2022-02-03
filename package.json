@@ -5,8 +5,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prepare": "husky install",
     "lint": "next lint",
-    "format": "prettier --write \"./{pages,components}/**/*.{js,jsx,ts,tsx,css,md,json}\" --config ./.prettierrc"
+    "format": "prettier --write \"./{pages,components}/**/*.{js,jsx,ts,tsx,css,md,json}\" --config ./.prettierrc",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
     "next": "12.0.10",
@@ -30,11 +32,6 @@
     "lint-staged": "^12.3.3",
     "prettier": "^2.5.1",
     "typescript": "4.5.5"
-  },
-  "lint-staged": {
-    "src/**/*.*": [
-      "next lint --fix", "npm run format", "git add"
-    ]
   },
   "husky": {
     "hooks": {
