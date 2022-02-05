@@ -19,6 +19,10 @@ const Home: NextPage = () => {
   const { t } = useTranslation();
   const router = useRouter();
 
+  const setCookie = (locale: string) => {
+    document.cookie = `NEXT_LOCALE=${locale}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -33,12 +37,11 @@ const Home: NextPage = () => {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <Link href={router.pathname} locale="en">
-          <a>en</a>
-        </Link>
-        <Link href={router.pathname} locale="pl">
-          <a>pl</a>
-        </Link>
+        {router.locales?.map(locale => (
+          <Link href={router.pathname} locale={locale} key={locale}>
+            <a onClick={() => setCookie(locale)}>{locale}</a>
+          </Link>
+        ))}
 
         <p className={styles.description}>
           Get started by editing{' '}
