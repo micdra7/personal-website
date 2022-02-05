@@ -5,16 +5,16 @@
   align-items: flex-start;
   align-content: flex-start;
 
-  &--centered-v {
-    align-items: center;
-    align-content: center;
-
-    height: 100%;
-  }
-
   &__children {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+
     width: 100%;
     max-width: 1200px;
     padding: 2rem;
+    min-height: 100vh;
   }
 }

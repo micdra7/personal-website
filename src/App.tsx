@@ -1,10 +1,10 @@
-import { Hero } from 'components/hero';
 import { Layout } from 'components/layout';
 import { Socials } from 'components/socials';
+import { Home } from 'pages/home';
 
 const App = (): JSX.Element => (
-  <Layout centeredVertically>
-    <Hero />
+  <Layout>
+    <Home />
     <Socials />
   </Layout>
 );
