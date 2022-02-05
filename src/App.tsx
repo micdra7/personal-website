@@ -3,6 +3,7 @@ import { Navbar } from 'components/navbar';
 import { Socials } from 'components/socials';
 import { About } from 'pages/about';
 import { Home } from 'pages/home';
+import { Projects } from 'pages/projects';
 
 const App = (): JSX.Element => (
   <>
@@ -10,6 +11,7 @@ const App = (): JSX.Element => (
     <Layout>
       <Home />
       <About />
+      <Projects />
     </Layout>
     <Socials />
   </>
