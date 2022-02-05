@@ -1,5 +1,5 @@
 export const English = {
-  headings: {
+  subheadings: {
     title: 'Fullstack Web Developer',
   },
 };

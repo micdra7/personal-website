@@ -1,8 +1,10 @@
+import './index.scss';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
-import { initTranslations } from './i18next';
+import { initTranslations } from './i18n';
 
 initTranslations();
 

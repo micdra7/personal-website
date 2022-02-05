@@ -1,5 +1,5 @@
 export const Polish = {
-  headings: {
+  subheadings: {
     title: 'Programista Fullstack',
   },
 };
