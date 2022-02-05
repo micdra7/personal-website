@@ -69,13 +69,6 @@
     ],
     "src/**/*.{css,scss,json}": [
       "prettier --write --config ./.prettierrc"
-    ],
-    "src/*.{js,ts,jsx,tsx}": [
-      "eslint --fix",
-      "prettier --write --config ./.prettierrc"
-    ],
-    "src/*.{css,scss,json}": [
-      "prettier --write --config ./.prettierrc"
     ]
   }
 }
