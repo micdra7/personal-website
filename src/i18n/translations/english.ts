@@ -6,6 +6,12 @@ export const English = {
   subheadings: {
     title: 'Fullstack Web Developer',
   },
+  navbar: {
+    start: 'Start',
+    about: 'About Me',
+    projects: 'Projects',
+    contact: 'Contact',
+  },
   text: {
     home: {
       description:

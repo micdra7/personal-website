@@ -7,7 +7,7 @@ export const Home = () => {
   const { t } = useTranslation();
 
   return (
-    <section className={styles.home}>
+    <section className={styles.home} id="home">
       <p className={styles.home__greeting}>{t('extra.greeting')}</p>
       <h1 className={styles.home__heading}>Michał Drabik</h1>
       <h3 className={styles.home__subheading}>{t('subheadings.title')}</h3>
