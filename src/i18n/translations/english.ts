@@ -3,6 +3,6 @@ export const English = {
     title: 'Fullstack Web Developer',
   },
   extra: {
-    greeting: 'Hi, my name is',
+    greeting: 'Hi, I am',
   },
 };

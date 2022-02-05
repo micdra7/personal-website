@@ -5,8 +5,16 @@
   align-items: flex-start;
   align-content: flex-start;
 
+  &--centered-v {
+    align-items: center;
+    align-content: center;
+
+    height: 100%;
+  }
+
   &__children {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1200px;
+    padding: 2rem;
   }
 }
