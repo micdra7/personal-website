@@ -1,3 +1,4 @@
+import { LinkButton } from 'components/link-button';
 import { useTranslation } from 'react-i18next';
 
 import styles from './hero.module.scss';
@@ -12,6 +13,8 @@ export const Hero = (): JSX.Element => {
       <h3 className={styles.hero__subheading}>{t('subheadings.title')}</h3>
 
       <p className={styles.hero__text}>{t('text.home.description')}</p>
+
+      <LinkButton href="mailto:micdra7@gmail.com" text={t('buttons.contact')} />
     </section>
   );
 };
