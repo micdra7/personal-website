@@ -1,6 +1,14 @@
 @import 'utils/variables.scss';
 
 .home {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  min-height: 100vh;
+
   &__greeting {
     margin: 0;
 
@@ -44,7 +52,7 @@
   &__subheading {
     margin: 0;
 
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 500;
     line-height: 1.85rem;
     color: scale-color($light, $lightness: -5%);

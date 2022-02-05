@@ -1,0 +1,25 @@
+@import 'utils/variables.scss';
+
+.section-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 0.5rem;
+
+  margin: 0;
+  margin-bottom: 2rem;
+  width: 100%;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $accent;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+
+    background-color: $light;
+  }
+}
