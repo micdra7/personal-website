@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 export const English = {
   headings: {
     about: 'About Me',
@@ -12,11 +13,10 @@ export const English = {
     },
     about: {
       description1:
-        // eslint-disable-next-line quotes
         "I'm Michał and I thoroughly enjoy creating complex web apps. Ever since starting to learn web development in primary school I've constantly been working on improving my abilities.",
       description2:
-        // eslint-disable-next-line quotes
         "Since 2018 I've been working professionally (part- and full-time) as a frontend / fullstack web developer. Simultaneously, I've been studying Informatics at Silesian University of Technology and in February, 2022 I've graduated as a Bachelor of Engineering",
+      description3: 'My main tech stack includes:',
     },
   },
   buttons: {

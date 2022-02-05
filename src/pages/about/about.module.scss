@@ -24,9 +24,24 @@
     @media screen and (min-width: $lg) {
       font-size: 1.5rem;
     }
+  }
 
-    @media screen and (min-width: $xl) {
-      width: 70%;
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    margin: 0;
+    margin-top: 0.5rem;
+    padding: 0;
+    padding-left: 2rem;
+
+    list-style-type: square;
+
+    & > li {
+      width: 50%;
     }
   }
 }
