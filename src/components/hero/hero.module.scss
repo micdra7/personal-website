@@ -1,11 +1,21 @@
 @import 'utils/variables.scss';
 
 .hero {
+  &__greeting {
+    margin: 0;
+
+    color: $accent;
+  }
+
   &__heading {
     margin: 0;
+
+    color: $light;
   }
 
   &__subheading {
     margin: 0;
+
+    color: $light;
   }
 }

@@ -1,8 +1,10 @@
 import { Hero } from 'components/hero';
-import React from 'react';
+import { Layout } from 'components/layout';
 
-const App = (): JSX.Element => {
-  return <Hero />;
-};
+const App = (): JSX.Element => (
+  <Layout>
+    <Hero />
+  </Layout>
+);
 
 export default App;

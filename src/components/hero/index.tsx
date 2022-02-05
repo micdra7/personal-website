@@ -7,6 +7,7 @@ export const Hero = (): JSX.Element => {
 
   return (
     <section className={styles.hero}>
+      <p className={styles.hero__greeting}>{t('extra.greeting')}</p>
       <h1 className={styles.hero__heading}>Michał Drabik</h1>
       <h3 className={styles.hero__subheading}>{t('subheadings.title')}</h3>
     </section>

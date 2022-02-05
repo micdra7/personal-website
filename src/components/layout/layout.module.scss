@@ -1,0 +1,12 @@
+.layout {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  &__children {
+    width: 100%;
+    max-width: 1440px;
+  }
+}
