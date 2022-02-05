@@ -1,18 +1,15 @@
 {
+  "env": {
+    "commonjs": true,
+    "es2020": true,
+    "node": false
+  },
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "airbnb-typescript",
-    "next",
     "prettier",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended"
-  ],
-  "plugins": [
-    "prettier",
-    "react",
-    "react-hooks",
-    "jsx-a11y",
-    "import",
-    "@typescript-eslint"
   ],
   "parserOptions": {
     "ecmaVersion": 11,
@@ -21,6 +18,14 @@
     },
     "project": "./tsconfig.json"
   },
+  "plugins": [
+    "prettier",
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "import",
+    "@typescript-eslint"
+  ],
   "rules": {
     "import/extensions": [
       "error",
@@ -36,11 +41,15 @@
       2,
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
+    "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "quotes": ["error", "single"],
+    "class-methods-use-this": "off",
+    "no-param-reassign": "off",
     "no-console": "warn",
     "camelcase": "error",
-    "no-unused-vars": "error",
+    "no-unused-vars": "warn",
+    "sort-imports": "off",
     "import/prefer-default-export": "off",
     "react/state-in-constructor": 0,
     "react/jsx-props-no-spreading": "off",
@@ -50,6 +59,19 @@
       0,
       "always",
       { "ignoreClassFields": true }
-    ]
+    ],
+    "lines-between-class-members": "off",
+    "@typescript-eslint/lines-between-class-members": ["off"],
+    "jsx-a11y/media-has-caption": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
   }
 }
