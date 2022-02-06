@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import styles from './navbar.module.scss';
@@ -28,6 +28,9 @@ const navbarLinks = [
 
 export const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
+  // navbarKey is used to trigger rerenders of navbar when window.location.hash changes
+  // in order to properly highlight active section
+  const [navbarKey, setNavbarKey] = useState(1);
   const { t } = useTranslation();
 
   const toggleMenu = () => {
@@ -38,6 +41,21 @@ export const Navbar = () => {
     window.location.hash = `#${id}`;
     toggleMenu();
   };
+
+  const onHashChange = () => {
+    const query = window.matchMedia('(min-width: 768px)');
+    if (query.matches) {
+      setNavbarKey(prev => prev + 1);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('hashchange', onHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', onHashChange);
+    };
+  }, []);
 
   return (
     <section className={styles.navbar}>
@@ -56,6 +74,7 @@ export const Navbar = () => {
         className={`${styles.navbar__nav} ${
           menuVisible ? styles['navbar__nav--open'] : ''
         }`}
+        key={navbarKey}
       >
         {navbarLinks.map(({ id, name, anchorId }) => (
           <li key={id} className={styles.navbar__link}>
