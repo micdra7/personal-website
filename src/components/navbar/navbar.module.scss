@@ -25,7 +25,7 @@
 
   &--with-background {
     background-color: $dark;
-    box-shadow: 3px 0px 5px $dark-medium;
+    box-shadow: 0 4px 5px -5px $dark-medium;
   }
 
   &__burger {
