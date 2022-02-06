@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import styles from './navbar.module.scss';
@@ -27,10 +27,12 @@ const navbarLinks = [
 ];
 
 export const Navbar = () => {
+  const navbarRef = useRef<HTMLDivElement>(null);
   const [menuVisible, setMenuVisible] = useState(false);
   // navbarKey is used to trigger rerenders of navbar when window.location.hash changes
   // in order to properly highlight active section
   const [navbarKey, setNavbarKey] = useState(1);
+  const [hasBackground, setHasBackground] = useState(false);
   const { t } = useTranslation();
 
   const toggleMenu = () => {
@@ -49,6 +51,19 @@ export const Navbar = () => {
     }
   };
 
+  const onScroll = () => {
+    const query = window.matchMedia('(min-width: 768px)');
+    if (
+      query.matches &&
+      navbarRef.current &&
+      window.scrollY > navbarRef.current.getBoundingClientRect().height
+    ) {
+      setHasBackground(true);
+    } else {
+      setHasBackground(false);
+    }
+  };
+
   useEffect(() => {
     window.addEventListener('hashchange', onHashChange);
 
@@ -57,8 +72,25 @@ export const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (navbarRef.current) {
+      window.addEventListener('scroll', onScroll);
+    }
+
+    return () => {
+      if (navbarRef.current) {
+        window.removeEventListener('scroll', onScroll);
+      }
+    };
+  }, [navbarRef]);
+
   return (
-    <section className={styles.navbar}>
+    <section
+      className={`${styles.navbar} ${
+        hasBackground ? styles['navbar--with-background'] : ''
+      }`}
+      ref={navbarRef}
+    >
       <button
         className={`${styles.navbar__burger} ${
           menuVisible ? styles['navbar__burger--open'] : ''

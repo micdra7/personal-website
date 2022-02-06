@@ -15,10 +15,17 @@
   width: 100%;
   padding: 1rem;
 
+  transition: background-color ease-in-out 0.25s, box-shadow ease-in-out 0.25s;
+
   @media screen and (min-width: $md) {
     left: 50%;
     transform: translate(-50%);
     max-width: $xl;
+  }
+
+  &--with-background {
+    background-color: $dark;
+    box-shadow: 3px 0px 5px $dark-medium;
   }
 
   &__burger {

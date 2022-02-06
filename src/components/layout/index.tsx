@@ -14,7 +14,7 @@ const observerCallback = (entries: IntersectionObserverEntry[]) => {
   });
 };
 
-const observerOptions: IntersectionObserverInit = { threshold: 0.8 };
+const observerOptions: IntersectionObserverInit = { threshold: 0.5 };
 
 export const Layout = ({ children }: ILayout) => {
   const containerRef = useRef<HTMLDivElement>(null);
