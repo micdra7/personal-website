@@ -3,6 +3,7 @@ export const English = {
   headings: {
     about: 'About Me',
     projects: 'Projects',
+    contact: 'Get In Touch',
   },
   subheadings: {
     title: 'Fullstack Web Developer',
@@ -26,7 +27,7 @@ export const English = {
       description3: 'My main tech stack includes:',
     },
     projects: {
-      techUsed: 'Technology used:',
+      techUsed: 'Tech used:',
       cardMatchingGame: {
         name: 'Card Matching Game',
         description:
@@ -43,12 +44,17 @@ export const English = {
           'Personal website displaying my previous work and describing my preferred tech stack,',
       },
     },
+    contact: {
+      description:
+        "If you have a question or want to get my full resume feel free to message me. I'll try to get back to you as soon as possible.",
+    },
   },
   buttons: {
     contact: 'Contact Me',
     frontendRepository: 'Frontend',
     backendRepository: 'Backend',
     liveSite: 'Live version',
+    sendMessage: 'Send Message',
   },
   extra: {
     greeting: 'Hi, I am',
