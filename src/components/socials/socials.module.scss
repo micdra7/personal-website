@@ -1,0 +1,37 @@
+@import 'utils/variables.scss';
+
+.socials {
+  position: fixed;
+  bottom: 1rem;
+  left: 2rem;
+  z-index: 1;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  column-gap: 0.75rem;
+
+  @media screen and (min-width: $xl) {
+    left: calc((100vw - $xl) / 2);
+  }
+
+  &__link {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.75rem;
+    color: $light;
+
+    transition: color ease-in-out 0.25s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: scale-color($light, $lightness: -10%);
+    }
+  }
+}

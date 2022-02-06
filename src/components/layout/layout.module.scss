@@ -1,0 +1,25 @@
+@import 'utils/variables.scss';
+
+.layout {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  &__children {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+
+    width: 100%;
+    max-width: $xl;
+    padding: 2rem;
+
+    @media screen and (min-width: $xl) {
+      padding: 2rem 0.5rem;
+    }
+  }
+}

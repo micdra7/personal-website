@@ -1,0 +1,90 @@
+@import 'utils/variables.scss';
+
+.home {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  min-height: 100vh;
+
+  &__greeting {
+    margin: 0;
+
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: $accent;
+
+    @media screen and (min-width: $sm) {
+      font-size: 0.9rem;
+    }
+
+    @media screen and (min-width: $md) {
+      font-size: 1rem;
+    }
+
+    @media screen and (min-width: $lg) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: $light;
+
+    @media screen and (min-width: $sm) {
+      font-size: 3rem;
+    }
+
+    @media screen and (min-width: $md) {
+      font-size: 4rem;
+    }
+
+    @media screen and (min-width: $lg) {
+      font-size: 5rem;
+    }
+  }
+
+  &__subheading {
+    margin: 0;
+
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.85rem;
+    color: scale-color($light, $lightness: -5%);
+
+    @media screen and (min-width: $md) {
+      font-size: 3rem;
+      line-height: 100%;
+    }
+
+    @media screen and (min-width: $xl) {
+      font-size: 4rem;
+    }
+  }
+
+  &__text {
+    margin: 1.25rem 0;
+
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 120%;
+    color: scale-color($light, $lightness: -5%);
+
+    @media screen and (min-width: $md) {
+      font-size: 1.25rem;
+    }
+
+    @media screen and (min-width: $lg) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: $xl) {
+      width: 70%;
+    }
+  }
+}

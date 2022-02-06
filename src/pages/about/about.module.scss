@@ -1,0 +1,48 @@
+@import 'utils/variables.scss';
+
+.about {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  width: 100%;
+  min-height: 100vh;
+
+  &__text {
+    margin: 1.25rem 0;
+
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 120%;
+    color: scale-color($light, $lightness: -5%);
+
+    @media screen and (min-width: $md) {
+      font-size: 1.25rem;
+    }
+
+    @media screen and (min-width: $lg) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    margin: 0;
+    margin-top: 0.5rem;
+    padding: 0;
+    padding-left: 2rem;
+
+    list-style-type: square;
+
+    & > li {
+      width: 50%;
+    }
+  }
+}
