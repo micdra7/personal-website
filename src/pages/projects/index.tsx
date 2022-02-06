@@ -15,9 +15,8 @@ const games: IProject[] = [
     description: 'text.projects.engineeringProject.description',
     photo: engineeringProject,
     alt: 'text.projects.cardMatchingGame.name',
-    frontendRepoUrl: '123',
-    backendRepoUrl: '123',
-    liveUrl: '123',
+    frontendRepoUrl: 'https://github.com/micdra7/engineering-project-frontend',
+    backendRepoUrl: 'https://github.com/micdra7/engineering-project-backend',
     tech: [
       'React',
       'NestJS',
