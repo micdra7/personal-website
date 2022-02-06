@@ -31,4 +31,22 @@
   &:focus {
     background-color: scale-color($accent, $alpha: -80%);
   }
+
+  &--small {
+    padding: 0.45rem;
+
+    font-size: 0.85rem;
+
+    @media screen and (min-width: $sm) {
+      padding: 0.75rem;
+
+      font-size: 1rem;
+    }
+
+    @media screen and (min-width: $lg) {
+      padding: 0.85rem;
+
+      font-size: 1.25rem;
+    }
+  }
 }

@@ -26,21 +26,28 @@ export const English = {
       description3: 'My main tech stack includes:',
     },
     projects: {
+      techUsed: 'Technology used:',
       cardMatchingGame: {
         name: 'Card Matching Game',
         description:
-          'Simple card matching game with 4 different difficulty levels and a scoreboard. Made with React & Redux.',
+          'Simple card matching game with 4 different difficulty levels and a scoreboard.',
       },
       engineeringProject: {
         name: 'Engineering Project',
         description:
           'A communication app allowing videocalls, chats, task management and simple games during videocalls.',
       },
+      personalWebsite: {
+        name: 'Personal Website',
+        description:
+          'Personal website displaying my previous work and describing my preferred tech stack,',
+      },
     },
   },
   buttons: {
     contact: 'Contact Me',
-    repository: 'Repository',
+    frontendRepository: 'Frontend',
+    backendRepository: 'Backend',
     liveSite: 'Live version',
   },
   extra: {

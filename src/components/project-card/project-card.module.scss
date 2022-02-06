@@ -6,6 +6,15 @@
   background-color: $dark-medium;
   border-radius: 0.5rem;
 
+  @media screen and (min-width: $md) {
+    width: calc(50% - 1rem);
+  }
+
+  @media screen and (min-width: $lg) {
+    width: auto;
+    max-width: calc(($xl / 3) - 1rem);
+  }
+
   &__header {
     width: 100%;
   }
@@ -40,12 +49,54 @@
 
   &__buttons {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: flex-start;
     align-items: center;
     align-content: center;
-    column-gap: 1rem;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
 
     margin: 1.25rem 0 0 0;
+  }
+
+  &__tech {
+    margin: 1.25rem 0;
+
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 120%;
+    color: scale-color($light, $lightness: -5%);
+
+    @media screen and (min-width: $md) {
+      font-size: 1.25rem;
+    }
+
+    @media screen and (min-width: $lg) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__tech-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    row-gap: 0.15rem;
+
+    margin: 0;
+    margin-top: 0.5rem;
+    padding: 0;
+    padding-left: 2rem;
+
+    list-style-type: square;
+
+    & > li {
+      width: 100%;
+
+      @media screen and (min-width: $sm) {
+        width: 50%;
+      }
+    }
   }
 }

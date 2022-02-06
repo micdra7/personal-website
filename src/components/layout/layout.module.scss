@@ -17,5 +17,9 @@
     width: 100%;
     max-width: $xl;
     padding: 2rem;
+
+    @media screen and (min-width: $xl) {
+      padding: 2rem 0.5rem;
+    }
   }
 }

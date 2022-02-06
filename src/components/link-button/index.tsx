@@ -4,6 +4,7 @@ interface ILinkButton {
   href: string;
   text: string;
   openInNewTab?: boolean;
+  variant?: 'small' | 'normal';
 }
 
 const getPropsForNewTabLink = (openInNewTab: boolean) =>
@@ -14,9 +15,16 @@ const getPropsForNewTabLink = (openInNewTab: boolean) =>
       }
     : {};
 
-export const LinkButton = ({ href, text, openInNewTab }: ILinkButton) => (
+export const LinkButton = ({
+  href,
+  text,
+  openInNewTab,
+  variant = 'normal',
+}: ILinkButton) => (
   <a
-    className={styles['link-button']}
+    className={`${styles['link-button']} ${
+      variant === 'small' ? styles['link-button--small'] : ''
+    }`}
     href={href}
     {...getPropsForNewTabLink(openInNewTab ?? false)}
   >
