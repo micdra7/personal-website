@@ -6,10 +6,28 @@ interface ILayout {
   children: JSX.Element | JSX.Element[] | null | undefined;
 }
 
+const timeouts: Record<string, NodeJS.Timeout | null> = {
+  home: null,
+  about: null,
+  projects: null,
+  contact: null,
+};
+
 const observerCallback = (entries: IntersectionObserverEntry[]) => {
   entries.forEach(entry => {
+    const { id } = entry.target;
     if (entry.isIntersecting) {
-      window.location.hash = `#${entry.target.id}`;
+      window.history.replaceState(null, '', `#${id}`);
+      // hash is updated automatically, but navbar only needs to be updated after a timeout
+      // as otherwise active link would be highlighted even if it wasn't actual scroll target
+      timeouts[id] = setTimeout(() => {
+        window.dispatchEvent(new Event('hashchange'));
+      }, 200);
+    } else {
+      if (!!timeouts[id]) {
+        const t = timeouts[id] as NodeJS.Timeout;
+        clearTimeout(t);
+      }
     }
   });
 };
