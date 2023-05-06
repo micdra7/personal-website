@@ -96,10 +96,11 @@ export const Navbar = () => {
           menuVisible ? styles['navbar__burger--open'] : ''
         }`}
         onClick={toggleMenu}
+        aria-label="Open navigation menu"
       >
-        <div className={styles.navbar__bar} />
-        <div className={styles.navbar__bar} />
-        <div className={styles.navbar__bar} />
+        <div className={styles.navbar__bar} aria-hidden />
+        <div className={styles.navbar__bar} aria-hidden />
+        <div className={styles.navbar__bar} aria-hidden />
       </button>
 
       <ul
